@@ -20,19 +20,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/getstream-chat-angular-example",
+            "outputPath": "dist/shop-n-chat",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -40,8 +35,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -72,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "getstream-chat-angular-example:build:production"
+              "browserTarget": "shop-n-chat:build:production"
             },
             "development": {
-              "browserTarget": "getstream-chat-angular-example:build:development"
+              "browserTarget": "shop-n-chat:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "getstream-chat-angular-example:build"
+            "browserTarget": "shop-n-chat:build"
           }
         },
         "test": {
@@ -94,13 +89,8 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -109,7 +99,7 @@
           "options": {
             "prerender": false,
             "ssr": false,
-            "browserTarget": "getstream-chat-angular-example:build:production",
+            "browserTarget": "shop-n-chat:build:production",
             "firebaseProject": "get-stream-id",
             "firebaseHostingSite": "get-stream-id"
           }
@@ -117,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "getstream-chat-angular-example"
+  "defaultProject": "shop-n-chat"
 }
